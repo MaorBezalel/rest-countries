@@ -1,0 +1,122 @@
+// ====================================Position==========================================
+@mixin position($position: null, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+// ======================================================================================
+
+// ===================================Position-Absolute==================================
+@mixin position-absolute-center {
+    @include position(absolute, $top: 50%, $right: 50%);
+    transform: translate(50%, -50%);
+}
+
+@mixin position-absolute-center-x {
+    @include position(absolute, $right: 50%);
+    transform: translateX(50%);
+}
+
+@mixin position-absolute-center-y {
+    @include position(absolute, $top: 50%);
+    transform: translateY(-50%);
+}
+
+@mixin position-absolute-bottom-center {
+    @include position(absolute, $bottom: 0, $right: 50%);
+    transform: translateX(50%);
+}
+
+@mixin position-absolute-top-center {
+    @include position(absolute, $top: 0, $right: 50%);
+    transform: translateX(50%);
+}
+
+@mixin position-absolute-left-center {
+    @include position(absolute, $top: 50%, $left: 0);
+    transform: translateY(-50%);
+}
+
+@mixin position-absolute-right-center {
+    @include position(absolute, $top: 50%, $right: 0);
+    transform: translateY(-50%);
+}
+
+@mixin position-absolute-bottom-left {
+    @include position(absolute, $bottom: 0, $left: 0);
+}
+
+@mixin position-absolute-bottom-right {
+    @include position(absolute, $bottom: 0, $right: 0);
+}
+
+@mixin position-absolute-top-left {
+    @include position(absolute, $top: 0, $left: 0);
+}
+
+@mixin position-absolute-top-right {
+    @include position(absolute, $top: 0, $right: 0);
+}
+
+@mixin position-absolute-top {
+    @include position(absolute, $top: 0);
+}
+
+@mixin position-absolute-bottom {
+    @include position(absolute, $bottom: 0);
+}
+
+@mixin position-absolute-left {
+    @include position(absolute, $left: 0);
+}
+
+@mixin position-absolute-right {
+    @include position(absolute, $right: 0);
+}
+// ====================================================================================
+
+
+// ===================================Position-Fixed===================================
+@mixin position-fixed-center {
+    @include position(fixed, $top: 50%, $right: 50%);
+    transform: translate(50%, -50%);
+}
+
+@mixin position-fixed-bottom-center {
+    @include position(fixed, $bottom: 0, $right: 50%);
+    transform: translateX(50%);
+}
+
+@mixin position-fixed-top-center {
+    @include position(fixed, $top: 0, $right: 50%);
+    transform: translateX(50%);
+}
+
+@mixin position-fixed-left-center {
+    @include position(fixed, $top: 50%, $left: 0);
+    transform: translateY(-50%);
+}
+
+@mixin position-fixed-right-center {
+    @include position(fixed, $top: 50%, $right: 0);
+    transform: translateY(-50%);
+}
+
+@mixin position-fixed-bottom-left {
+    @include position(fixed, $bottom: 0, $left: 0);
+}
+
+@mixin position-fixed-bottom-right {
+    @include position(fixed, $bottom: 0, $right: 0);
+}
+
+@mixin position-fixed-top-left {
+    @include position(fixed, $top: 0, $left: 0);
+}
+
+@mixin position-fixed-top-right {
+    @include position(fixed, $top: 0, $right: 0);
+}
+// ====================================================================================

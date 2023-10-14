@@ -1,0 +1,138 @@
+// General Imports
+@forward 'theme';
+@forward 'helpers';
+@forward 'utils';
+@forward 'animations';
+
+// Layout Imports
+@forward '../layouts/header/Header';
+@forward '../layouts/footer/Footer';
+
+// Pages Imports
+@forward '../pages/home/HomePage';
+@forward '../pages/country-detail/CountryDetailPage';
+
+// Uses
+@use 'theme' as *;
+@use 'helpers' as *;
+@use 'utils' as *;
+@use 'animations' as *;
+
+// Styles
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;
+    font-family: $ff-all;
+}
+
+html {
+    transition: scrollbar-color 0.3s ease-in-out;
+    &[data-theme="dark"] {
+        scrollbar-color: #666 #201c29;
+
+        &::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #434343;
+            border-radius: 16px;
+            box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
+        }
+    }
+
+    &[data-theme="light"] {
+        scrollbar-color: #999 #f3f3f3;
+
+        &::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 16px;
+            box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: linear-gradient(90deg, #ccc, #ccc 1px, #f3f3f3 0, #f3f3f3);
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    @include reset-body;
+    background-color: var(--clr-bg-page);
+    
+
+    // &::-webkit-scrollbar {
+    //     width: 0.5rem;
+    // }
+
+    // &::-webkit-scrollbar-track {
+    //     background-color: var(--clr-bg-page);
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: var(--clr-scrollbar);
+    //     outline: 2px solid var(--clr-scrollbar);
+    // }
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include reset;
+    @include typography($color: var(--clr-text), $font-weight: $fw-extra-bold, $font-family: $ff-all);
+}
+
+p, span {
+    @include reset;
+    @include typography($color: var(--clr-text), $font-weight: $fw-light, $font-family: $ff-all);
+}
+
+a {
+    @include typography($color: var(--clr-text), $font-weight: $fw-semi-bold, $font-family: $ff-all);
+    text-decoration: none;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+ul, menu {
+    @include reset-list;
+}
+
+button {
+    user-select: none;
+}
+
+b {
+    @include typography($color: var(--clr-text), $font-weight: $fw-semi-bold, $font-family: $ff-all);
+}
+
+.main-wrapper {
+    width: 100%;
+    background-color: var(--clr-bg-page);
+}
+
+.error {
+    @include flexbox($justify-content: center, $align-items: center);
+}

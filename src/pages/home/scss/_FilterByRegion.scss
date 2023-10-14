@@ -1,0 +1,57 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers' as *;
+
+.filter-by-region {
+    @include flexbox-row($justify-content: space-between, $align-items: center);
+    padding: 1rem;
+    width: 12rem;
+    position: relative;
+    background-color: var(--clr-bg-element);
+    box-shadow: var(--clr-shadow);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &__title {
+        @include typography($color: var(--clr-text), $font-size: var(--fs-lg), $font-weight: $fw-light);
+        position: relative;
+        cursor: pointer;
+        transform: scaleX(-1);
+        user-select: none;
+
+        span {
+            display: inline-block;
+            position: absolute;
+            transform: scaleX(-1);
+            padding-right: 2rem;
+        }
+    }
+
+    &__menu {
+        @include position(absolute, $top: 4rem, $left: 0);
+        @include size($width: 100%, $height: fit-content);
+        padding: 0.5rem;
+        background-color: var(--clr-bg-element);
+        box-shadow: var(--clr-shadow);
+        border-radius: 5px;
+        z-index: 1;
+
+        &-item button {
+            @include typography($color: var(--clr-text), $font-size: var(--fs-lg), $font-weight: $fw-light);
+            background-color: inherit;
+            border: 0;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+    @include breakpoint('tablet-lg') {
+        width: 15rem;
+
+        &__title span {
+            padding-right: 5rem;
+        }
+    }
+}

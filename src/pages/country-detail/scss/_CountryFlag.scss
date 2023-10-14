@@ -1,0 +1,34 @@
+@use '../../../styles/helpers/breakpoints' as *;
+@use '../../../styles/helpers/sizes' as *;
+
+.country-page__flag {
+    @include size($width: 100%, $height: 25rem);
+    margin-top: 3rem;
+
+    @include breakpoint('desktop') {
+        height: 20rem;
+        margin-top: 4rem;
+    }
+
+    @include breakpoint('laptop-lg') {
+        height: 15rem;
+        margin-top: 5rem;
+    }
+
+    @include breakpoint('laptop-sm') {
+        height: 20rem;
+        margin-top: 0;
+    }
+
+    @include breakpoint('tablet-sm') {
+        height: 15rem;
+    }
+
+    @include breakpoint('mobile-lg') {
+        height: 12.5rem;
+    }
+
+    @include breakpoint('mobile-md') {
+        height: 10.5rem;
+    }
+}

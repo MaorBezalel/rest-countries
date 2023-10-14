@@ -1,0 +1,138 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers' as *;
+
+.country-card {
+    $self: '.country-card';
+    
+    @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+    background-color: var(--clr-bg-element);
+    border-radius: 5px;
+    box-shadow: var(--clr-shadow);
+
+    &:hover {
+        scale: 1.1;
+    }
+
+    &__flag {
+        @include size($width: 100%, $height: 11rem);
+        cursor: pointer;
+
+        img {
+            @include size-square(100%);
+            object-fit: cover;
+        }
+    }
+
+    &__details {
+        @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+        gap: 1rem;
+        padding: 2rem 2rem;
+        width: 100%;
+
+        #{$self}__name {
+            @include typography($color: var(--clr-text), $font-size: $fs-xl);
+        }
+
+        #{$self}__info {
+            @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+            gap: 0.5rem;
+            &-item {
+                @include flexbox-row($justify-content: flex-start, $align-items: flex-start);
+                gap: 0.3rem;
+
+                b {
+                    font-size: $fs-lg;
+                    font-weight: $fw-semi-bold;
+                }
+            }
+        }
+    }
+
+    @include breakpoint('desktop') {
+        $self: '.country-card';
+        
+        &__details {
+            @include padding-x(1.5rem)
+        }
+    }
+
+    @include breakpoint('tablet-lg') {
+        $self: '.country-card';
+
+        &__flag {
+            height: 9rem;
+        }
+        
+        &__details {
+            @include padding-x(1rem);
+
+            #{$self}__name {
+                font-size: $fs-lg;
+            }
+
+            #{$self}__info {
+                &-item {
+                    b {
+                        font-size: $fs-md;
+                    }
+
+                    p {
+                        font-size: $fs-sm;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint('mobile-lg') {
+        $self: '.country-card';
+
+        @include margin-x(2rem);
+
+        &__flag {
+            height: 10rem;
+        }
+        
+        &__details {
+            #{$self}__name {
+                font-size: $fs-xl;
+            }
+
+            #{$self}__info {
+                &-item {
+                    b {
+                        font-size: $fs-lg;
+                    }
+
+                    p {
+                        font-size: $fs-md;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint('mobile-md') {
+        $self: '.country-card';
+
+        @include margin-x(1rem);
+
+        &__details {
+            #{$self}__name {
+                font-size: $fs-lg;
+            }
+
+            #{$self}__info {
+                &-item {
+                    b {
+                        font-size: $fs-md;
+                    }
+
+                    p {
+                        font-size: $fs-sm;
+                    }
+                }
+            }
+        }
+    }
+}

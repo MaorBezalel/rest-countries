@@ -1,0 +1,36 @@
+@use '../../styles/helpers' as *;
+
+.footer-wrapper {
+    width: 100%;
+    background-color: black;
+}
+
+.footer {
+    @include flexbox-row($justify-content: center, $align-items: center);
+    gap: 5px;
+    text-align: center;
+    color: white;
+    height: 3rem;
+
+    .challenger {
+        @include flexbox-row($justify-content: center, $align-items: center);
+        gap: 5px;
+    }
+
+    .author {
+        @include flexbox-row($justify-content: center, $align-items: center);
+        gap: 5px;
+    }
+
+    a {
+        color: burlywood;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+
+    @include breakpoint('tablet-sm') {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,45 @@
+// ===================================Flexbox===================================
+@mixin flexbox($direction: null, $wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
+
+@mixin flexbox-row($wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
+    @include flexbox(row, $wrap, $justify-content, $align-items, $align-content);
+}
+
+@mixin flexbox-column($wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
+    @include flexbox(column, $wrap, $justify-content, $align-items, $align-content);
+}
+
+@mixin flexbox-item($flex: null, $order: null, $align-self: null) {
+    flex: $flex;
+    order: $order;
+    align-self: $align-self;
+}
+// =============================================================================
+
+// ===================================Grid======================================
+@mixin grid($rows: null, $columns: null, $gap: null, $row-gap: null, $column-gap: null) {
+    display: grid;
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+    gap: $gap;
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+}
+
+@mixin grid-item($row: null, $column: null, $row-start: null, $row-end: null, $column-start: null, $column-end: null, $area: null) {
+    grid-row: $row;
+    grid-column: $column;
+    grid-row-start: $row-start;
+    grid-row-end: $row-end;
+    grid-column-start: $column-start;
+    grid-column-end: $column-end;
+    grid-area: $area;
+}
+// =============================================================================

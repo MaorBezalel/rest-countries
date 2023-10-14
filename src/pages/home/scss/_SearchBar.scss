@@ -1,0 +1,74 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers' as *;
+
+.search-bar {
+    @include flexbox-row($justify-content: flex-start, $align-items: center);
+    width: fit-content;
+    position: relative;
+    
+    &__input {
+        @include size($width: 30rem, $height: 4rem);
+        @include padding-x($left: 4rem, $right: 1rem);
+        @include typography($color: var(--clr-text), $font-size: var(--fs-lg), $font-weight: $fw-light);
+        background-color: var(--clr-bg-element);
+        border-radius: 0.5rem;
+        border: 0;
+        box-shadow: var(--clr-shadow);
+
+        &:focus {
+            outline: 2px solid var(--clr-text);
+        }
+
+        &::placeholder {
+            opacity: 0.8;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 10px;
+            opacity: 0.6;
+
+            background:
+                linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 43%,#000 45%,#000 55%,rgba(0,0,0,0) 57%,rgba(0,0,0,0) 100%),
+                linear-gradient(135deg, transparent 0%,transparent 43%,#000 45%,#000 55%,transparent 57%,transparent 100%);
+
+            :root[data-theme="dark"] & {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &__icon {
+        @include size-min-square(1.2rem);
+        @include position(absolute, $left: 1.5rem);
+        opacity: 0.4;
+    }
+
+    @include breakpoint('laptop-lg') {
+        &__input {
+            width: 25rem;
+        }
+    }
+
+    @include breakpoint('laptop-sm') {
+        &__input {
+            width: 20rem;
+        }
+    }
+
+    @include breakpoint('tablet-lg') {
+        width: 100%;
+
+        &__input {
+            width: 100%;
+            padding-left: 4.6rem;
+        }
+
+        &__icon {
+            left: 2rem;
+        }
+    }
+}

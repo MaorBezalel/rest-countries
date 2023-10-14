@@ -1,0 +1,9 @@
+@mixin typography( $color: null, $font-size: null, $font-weight: null, $font-family: null, $line-height: null, $letter-spacing: null, $text-align: null) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+}

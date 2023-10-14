@@ -1,0 +1,21 @@
+@mixin size($width: null, $height: null, $min-width: null, $min-height: null, $max-width: null, $max-height: null) {
+    width: $width;
+    height: $height;
+    min-width: $min-width;
+    min-height: $min-height;
+    max-width: $max-width;
+    max-height: $max-height;
+}
+
+@mixin size-square($size: null) {
+    @include size($width: $size, $height: $size);
+}
+
+@mixin size-min-square($size: null) {
+    @include size($min-width: $size, $min-height: $size);
+}
+
+@mixin size-circle($size: null) {
+    @include size-square($size);
+    border-radius: 50%;
+}

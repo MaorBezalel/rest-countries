@@ -1,0 +1,9 @@
+@use '../../../styles/helpers/breakpoints' as *;
+@use '../../../styles/helpers/sizes' as *;
+
+.country-page__flag-skeleton-container {
+    @include breakpoint('laptop-sm') {
+        @include size($width: 100%, $height: fit-content);
+        display: block;
+    }
+}

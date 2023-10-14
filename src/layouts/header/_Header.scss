@@ -1,0 +1,46 @@
+@forward './theme-mode/ThemeMode';
+
+@use '../../styles/theme/' as *;
+@use '../../styles/helpers' as *;
+
+.header-wrapper {
+    width: 100%;
+    background-color: var(--clr-bg-element);
+    box-shadow: var(--clr-shadow);
+}
+
+.header {
+    @include flexbox-row($justify-content: space-between, $align-items: center);
+    @include padding-y(1rem);
+
+    .header__title {
+        font-size: $fs-4xl;
+        a {
+            font-weight: $fw-extra-bold;
+        }
+    }
+
+    @include breakpoint('desktop') {
+        .header__title {
+            font-size: $fs-3xl;
+        }
+    }
+
+    @include breakpoint('tablet-lg') {
+        .header__title {
+            font-size: $fs-2xl;
+        }
+    }
+
+    @include breakpoint('mobile-lg') {
+        .header__title {
+            font-size: $fs-xl;
+        }
+    }
+
+    @include breakpoint('mobile-md') {
+        .header__title {
+            font-size: $fs-lg;
+        }
+    }
+}

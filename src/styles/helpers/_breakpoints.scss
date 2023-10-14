@@ -1,0 +1,53 @@
+@mixin breakpoint($point) {
+    @if $point == 'desktop' {
+        @media (max-width: 1536px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'laptop-lg' {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'laptop-sm' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'tablet-lg' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'tablet-sm' {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'mobile-lg' {
+        @media (max-width: 475px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'mobile-md' {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+
+    @else if $point == 'mobile-sm' {
+        @media (max-width: 340px) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Breakpoint not found.";
+    }
+}

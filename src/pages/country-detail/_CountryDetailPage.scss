@@ -1,0 +1,75 @@
+@forward 'scss/CountryFlag';
+@forward 'scss/BorderCountries';
+@forward 'scss/CountryInfoList';
+@forward 'scss/CountryFlagSkeleton';
+
+@use '../../styles/theme' as *;
+@use '../../styles/helpers' as *;
+
+.country-page {
+    $self: '.country-page';
+    padding-bottom: 1rem;
+
+    &__back-link {
+        &-btn {
+            @include flexbox($justify-content: center, $align-items: baseline);
+            @include size($width: 10rem, $height: 3.5rem);
+            padding-top: 0.875rem;
+            font-size: $fs-xl;
+            background-color: var(--clr-bg-element);
+            border-radius: 0.8rem;
+            box-shadow: var(--clr-shadow);
+            span {
+                font-size: $fs-3xl;
+                margin-right: 0.6rem;
+            }
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+    &__details {
+        @include grid($columns: repeat(2, 1fr), $gap: 7rem);
+
+        #{$self}__info {
+            @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+            gap: 2rem;
+            padding-top: 4.5rem;
+
+            #{$self}__name {
+                font-size: $fs-4xl;
+            }
+        }
+    }
+
+    @include breakpoint('desktop') {
+        &__details {
+            gap: 3.5rem;
+        }
+    }
+
+    @include breakpoint('laptop-sm') {
+        &__back-link {
+            &-btn {
+                @include size($width: 8rem, $height: 3rem);
+                padding-top: 0.75rem;
+                font-size: $fs-md;
+                span {
+                    font-size: $fs-xl;
+                    margin-right: 0.4rem;
+                }
+            }
+        }
+
+        &__details {
+            @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+            gap: 3rem;
+
+            #{$self}__info {
+                padding-top: 0;
+            }
+        }
+    }
+}

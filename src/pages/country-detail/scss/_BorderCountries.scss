@@ -1,0 +1,86 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers/displays' as *;
+@use '../../../styles/helpers/breakpoints' as *;
+@use '../../../styles/helpers/sizes' as *;
+
+.country-page__border-countries {
+    $self: '.country-page';
+
+    @include flexbox-row($justify-content: flex-start, $align-items: baseline);
+    gap: 4rem;
+    padding-top: 4.5rem;
+
+    &-title {
+        white-space: nowrap;
+        font-size: $fs-xl;
+    }
+
+    &-list {
+        @include flexbox-row($wrap: wrap, $justify-content: flex-start, $align-items: baseline);
+        gap: 1rem;
+
+        &-item {
+            @include size($width: 8rem, $height: 2.5rem);
+            background-color: var(--clr-bg-element);
+            box-shadow: var(--clr-shadow);
+            border-radius: 0.5rem;
+
+            &:hover {
+                scale: 1.1;
+            }
+
+            #{$self}__border-countries-link-btn {
+                @include flexbox($justify-content: center, $align-items: center);
+                @include size($width: 100%, $height: 100%);
+                font-size: $fs-xs;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+
+    @include breakpoint('desktop') {
+        gap: 3.5rem;
+        padding-top: 0;
+        
+        &-list {
+            gap: 1.5rem;
+
+            &-item {
+                //@include size($width: 10rem, $height: 3.5rem);
+                @include size($width: 6.5rem, $height: 2.5rem);
+            }
+        }
+    }
+
+    @include breakpoint('tablet-sm') {
+        @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+        gap: 1.5rem;
+        
+        &-list {
+            gap: 1rem;
+
+            &-item {
+                @include size($width: 8rem, $height: 2.5rem);
+            }
+        }
+    }
+
+    @include breakpoint('mobile-lg') {
+        &-list {
+            gap: 1rem;
+
+            &-item {
+                width: 30%;
+            }
+        }
+    }
+
+    @include breakpoint('mobile-sm') {
+        &-list {
+            &-item {
+                width: 45%;
+            }
+        }
+    }
+}

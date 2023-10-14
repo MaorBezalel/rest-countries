@@ -1,0 +1,11 @@
+@use '../helpers/breakpoints' as *;
+
+.section {
+    margin-top: 3rem;
+}
+
+@include breakpoint('tablet-lg') {
+    .section {
+        margin-top: 1rem;
+    }
+}

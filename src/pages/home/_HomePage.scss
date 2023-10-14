@@ -1,0 +1,39 @@
+@forward 'scss/SearchBar';
+@forward 'scss/FilterByRegion';
+@forward 'scss/CountryCard';
+
+@use '../../styles/helpers' as *;
+
+.home-page__search {
+    @include flexbox-row($justify-content: space-between, $align-items: center);
+    position: relative;
+
+    @include breakpoint('tablet-lg') {
+        @include flexbox-column($justify-content: flex-start, $align-items: flex-start);
+        gap: 3rem;
+    }
+}
+
+.home-page__countries {
+    @include grid($columns: repeat(4, 1fr), $gap: 5rem);
+
+    @include breakpoint('desktop') {
+        gap: 3rem;
+    }
+
+    @include breakpoint('laptop-lg') {
+        @include grid($columns: repeat(3, 1fr), $gap: 5rem);
+    }
+
+    @include breakpoint('laptop-sm') {
+        @include grid($columns: repeat(2, 1fr));
+    }
+
+    @include breakpoint('tablet-sm') {
+        gap: 2rem;
+    }
+
+    @include breakpoint('mobile-lg') {
+        @include grid($columns: repeat(1, 1fr), $gap: 4rem);
+    }
+}

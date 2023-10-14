@@ -1,0 +1,67 @@
+@use '../helpers/breakpoints' as *;
+@use '../helpers/spacing' as *;
+
+.container {
+    @include margin-x(auto);
+    @include padding-x(0.5rem);
+    max-width: 1536px;
+}
+
+// ======================================Breakpoints=====================================
+
+// screen width == 1536px
+@include breakpoint('desktop') {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+// screen width == 1280px
+@include breakpoint('laptop-lg') {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+// screen width == 1024px
+@include breakpoint('laptop-sm') {
+    .container {
+        max-width: 768px;
+    }
+}
+
+// screen width == 768px
+@include breakpoint('tablet-lg') {
+    .container {
+        max-width: 640px;
+    }
+}
+
+// screen width == 640px
+@include breakpoint('tablet-sm') {
+    .container {
+        max-width: 475px;
+    }
+}
+
+// screen width == 475px
+@include breakpoint('mobile-lg') {
+    .container {
+        max-width: 375px;
+    }
+}
+
+// screen width == 375px
+@include breakpoint('mobile-md') {
+    .container {
+        max-width: 340px;
+    }
+}
+
+// screen width == 340px
+@include breakpoint('mobile-sm') {
+    .container {
+        max-width: 100%;
+    }
+}
+// ======================================================================================

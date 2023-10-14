@@ -1,0 +1,33 @@
+// ======================================Margin======================================
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin margin-x($right: null, $left: $right) {
+    @include margin($right: $right, $left: $left);
+}
+
+@mixin margin-y($top: null, $bottom: $top) {
+    @include margin($top: $top, $bottom: $bottom);
+}
+// ==================================================================================
+
+// ======================================Padding=====================================
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin padding-x($right: null, $left: $right) {
+    @include padding($right: $right, $left: $left);
+}
+
+@mixin padding-y($top: null, $bottom: $top) {
+    @include padding($top: $top, $bottom: $bottom);
+}
+// ==================================================================================

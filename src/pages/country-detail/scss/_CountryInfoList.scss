@@ -1,0 +1,41 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers/displays' as *;
+@use '../../../styles/helpers/breakpoints' as *;
+@use '../../../styles/helpers/sizes' as *;
+
+.nowrap-text {
+    white-space: nowrap;
+}
+
+.country-page__lists {
+    $self: '.country-page';
+    @include flexbox-row($justify-content: flex-start, $align-items: baseline);
+    gap: 6rem;
+
+    #{$self}__list {
+        @include flexbox-column($justify-content: flex-start, $align-items: baseline);
+        gap: 0.5rem;
+
+        #{$self}__list-item {
+            @include flexbox-row($justify-content: flex-start, $align-items: baseline);
+            gap: 0.4rem;
+
+            b {
+                font-size: $fs-md;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include breakpoint('desktop') {
+        gap: 3rem;
+
+        #{$self}__list {
+            gap: 1rem;
+        }
+    }
+
+    @include breakpoint('tablet-sm') {
+        @include flexbox-column($justify-content: flex-start, $align-items: baseline);
+    }
+}

@@ -1,0 +1,110 @@
+@use '../../../styles/theme' as *;
+@use '../../../styles/helpers' as *;
+.theme-mode__toggle {
+    $self: '.theme-mode';
+
+    @include flexbox($align-items: center);
+    @include size($width: 6.5rem, $height: 3rem);
+    @include padding-x(0.2rem);
+    box-shadow: var(--clr-theme-toggle-shadow);
+    position: relative;
+    border-radius: 10rem;
+    border: 0;
+    background-color: var(--clr-bg-element);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    
+    #{$self}__indicator {
+        @include size-circle(2.5rem);
+        @include flexbox($justify-content: center, $align-items: center);
+        background-color: var(--clr-bg-element);
+        box-shadow: 0 0 8px rgba(0,0,0, .1),
+                    0 0 4px rgba(0,0,0, .1),
+                    0 0 2px rgba(0,0,0, .1);
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    
+        :root[data-theme="dark"] & {
+            transform: translateX(3.6rem);
+        }
+    
+    
+        #{$self}__icon {
+            @include size(1.5rem);
+            transition: fill 0.3s ease-in-out;
+            transform: translateX(-0.08rem);
+
+            :root[data-theme="dark"] & {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    @include breakpoint('desktop') {
+        @include size($width: 5rem, $height: 2.5rem);
+
+        #{$self}__indicator {
+            @include size-circle(2.1rem);
+            
+            :root[data-theme="dark"] & {
+                transform: translateX(2.5rem);
+            }
+
+            #{$self}__icon {
+                @include size(1.3rem);
+                transform: translateX(-0.05rem);
+            }
+        }
+    }
+
+    @include breakpoint('tablet-lg') {
+        @include size($width: 4rem, $height: 2rem);
+
+        #{$self}__indicator {
+            @include size-circle(1.7rem);
+            
+            :root[data-theme="dark"] & {
+                transform: translateX(1.9rem);
+            }
+
+            #{$self}__icon {
+                @include size(1rem);
+                transform: translateX(-0.09rem);
+            }
+        }
+    }
+
+    @include breakpoint('mobile-lg') {
+        @include size($width: 3.5rem, $height: 2rem);
+
+        #{$self}__indicator {
+            @include size-circle(1.5rem);
+            
+            :root[data-theme="dark"] & {
+                transform: translateX(1.65rem);
+            }
+
+            #{$self}__icon {
+                @include size(0.9rem);
+                transform: translateX(-0.07rem);
+            }
+        }
+    }
+
+    @include breakpoint('mobile-md') {
+        @include size($width: 3rem, $height: 1.5rem);
+
+        #{$self}__indicator {
+            @include size-circle(1.3rem);
+            
+            :root[data-theme="dark"] & {
+                transform: translateX(1.4rem);
+            }
+
+            #{$self}__icon {
+                @include size(0.8rem);
+                transform: translateX(-0.05rem);
+            }
+        }
+    }
+}
