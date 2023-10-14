@@ -6,6 +6,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/rest-countries',
   plugins: [react()],
   test: {
     includeSource: ["src/**/*.{ts,tsx}"],
