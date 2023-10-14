@@ -7,7 +7,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="unknown">
+    <a href="https://www.frontendmentor.io/solutions/rest-countries-api-vitereactreactrouteraxiosscsstypescript-JSMkXIRUdh">
       Solution
     </a>
    <span> | </span>
@@ -105,6 +105,7 @@ Welcome to my solution for the REST Countries API with a color theme switcher ch
 
 - [Frontend Mentor](https://www.frontendmentor.io/) - for providing the challenge and the designs.
 - [REST Countries API](https://restcountries.com/) - for providing a robust easy to use API for country data.
+- [Font Awesome](https://fontawesome.com/) - for providing the icons used in this project.
 
 ## 📝 License <a name = "license"></a>
 
