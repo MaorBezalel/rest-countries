@@ -4,7 +4,7 @@
     <h1>REST Countries API with color theme switcher</h1>
   <h3>
     <a href="https://maorbezalel.github.io/rest-countries/" color="white">
-      Demo
+      Live
     </a>
     <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/rest-countries-api-vitereactreactrouteraxiosscsstypescript-JSMkXIRUdh">
@@ -35,35 +35,35 @@ Welcome to my solution for the REST Countries API with a color theme switcher ch
     <tr>
         <td>📋 Languages & Tools</td>
         <td>
-            <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="Sass">
-            <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+            <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="Sass"></a>
+            <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
         </td>
     </tr>
         <td>📚 Libraries</td>
         <td>
-            <img src="https://img.shields.io/badge/axios-%23FF0000.svg?style=for-the-badge&logo=axios&logoColor=white" alt="Axios">
-            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
-            <img src="https://img.shields.io/badge/react_router-%23CA4245.svg?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
+            <a href="https://axios-http.com/"><img src="https://img.shields.io/badge/axios-%23FF0000.svg?style=for-the-badge&logo=axios&logoColor=white" alt="Axios"></a>
+            <a href="https://react.dev/"><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"></a>
+            <a href="https://reactrouter.com/en/main"><img src="https://img.shields.io/badge/react_router-%23CA4245.svg?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router"></a>
         </td>
     </tr>
     <tr>
         <td>🚀 Frameworks</td>
         <td>
-            <img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" alt="NPM">
-            <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+            <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" alt="NPM"></a>
+            <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"></a>
         </td>
     </tr>
     <tr>
         <td>🧪 Testing</td>
         <td>
-            <img src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white" alt="React Testing Library">
-            <img src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white" alt="Vitest">
+            <a href="https://testing-library.com/docs/react-testing-library/intro/"><img src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white" alt="React Testing Library"></a>
+            <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white" alt="Vitest"></a>
         </td>
     </tr>
     <tr>
         <td>☁️ Hosting</td>
         <td>
-            <img src="https://img.shields.io/badge/GitHub_Pages-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
+            <a href="https://pages.github.com/"><img src="https://img.shields.io/badge/GitHub_Pages-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages"></a>
         </td>
     </tr>
 </table>
